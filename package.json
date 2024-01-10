@@ -1,0 +1,29 @@
+{
+  "name": "sales_order",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7.5.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1"
+  },
+  "cds":{
+    "requires": {
+      "db":{
+        "kind": "sqlite",
+        "impl":"@cap-js/sqlite",
+        "credentials": {
+          "uri":"db.sqlite"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "start": "cds-serve"
+  }
+}
